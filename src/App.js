@@ -5,7 +5,7 @@ import shows from './shows';
 function ShowList(props) {
   const shows = props.shows;
   const showItems = shows.map((show) =>
-  <ul>
+  <ul key={show.artist_name}>
     <li>{show.artist_name}</li>
     <li>Venue: {show.venue_name}</li>
     <li>Address: {show.venue_address}</li>
