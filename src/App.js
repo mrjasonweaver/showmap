@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import ShowList from './ShowList';
 import shows from './shows';
-
-function ShowList(props) {
-  const shows = props.shows;
-  const showItems = shows.map((show) =>
-  <ul key={show.show_id}>
-    <li>{show.artist_name}</li>
-    <li>Venue: {show.venue_name}</li>
-    <li>Address: {show.venue_address}</li>
-  </ul>
-);
-  return (
-    <div>{showItems}</div>
-  );
-}
 
 class App extends Component {
   
