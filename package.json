@@ -20,6 +20,6 @@
     "eject": "react-scripts eject"
   },
   "jest": {
-    "setupFiles": ["src/testSetup.js"]
+    "setupFiles": ["./src/testSetup.js"]
   }
 }
