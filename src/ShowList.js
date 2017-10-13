@@ -4,7 +4,7 @@ export default function ShowList(props) {
 
   function formattedTime(dateStr) {
     let time = new Date(dateStr);
-    return time.toString();
+    return time.getHours();
   }
   const shows = props.shows;
   const showItems = shows.map((show) =>
