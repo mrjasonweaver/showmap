@@ -3,8 +3,17 @@ import React from 'react';
 export default function ShowList(props) {
 
   function formattedTime(dateStr) {
-    let time = new Date(dateStr);
-    return time.getHours();
+    let dateTime = new Date(dateStr);
+    let hours = dateTime.getHours();
+    let minutes = dateTime.getMinutes();
+    let ampm = hours > 11 ? 'pm' : 'am';
+    let formattedHours;
+    if (hours > 11) {
+      formattedHours = hours - 12;
+    } else {
+      formattedHours = hours;
+    }
+    return formattedHours+':'+minutes+ampm;
   }
   const shows = props.shows;
   const showItems = shows.map((show) =>
