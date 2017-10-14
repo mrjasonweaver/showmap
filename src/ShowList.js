@@ -3,17 +3,14 @@ import React from 'react';
 export default function ShowList(props) {
 
   function formattedTime(dateStr) {
-    let dateTime = new Date(dateStr);
-    let hours = dateTime.getHours();
-    let minutes = dateTime.getMinutes();
-    let ampm = hours > 11 ? 'pm' : 'am';
-    let formattedHours;
-    if (hours > 11) {
-      formattedHours = hours - 12;
-    } else {
-      formattedHours = hours;
-    }
-    return formattedHours+':'+minutes+ampm;
+    const dateTime = new Date(dateStr);
+    const hours = dateTime.getHours();
+    const minutes = dateTime.getMinutes();
+    const ampm = hours >= 12 ? 'pm' : 'am';
+    let formattedHours = hours > 12 ? hours - 12 : hours;
+    let formattedMinutes = minutes > 9 ? "" + minutes : "0" + minutes;
+
+    return formattedHours+':'+formattedMinutes+ampm;
   }
   const shows = props.shows;
   const showItems = shows.map((show) =>
@@ -21,7 +18,7 @@ export default function ShowList(props) {
       <ul>
         <li className={'show-' + show.show_id}>{show.artist_name}</li>
         <li>Venue: {show.venue_name}</li>
-        <li>When: {formattedTime(show.time)}</li>
+        <li>When: {formattedTime(show.date)}</li>
         <li>Address: {show.venue_address}</li>
         <li>Latitude: {show.coordinates.latitude}</li>
         <li>Longitude: {show.coordinates.longitude}</li>
