@@ -7,8 +7,8 @@ export default function ShowList(props) {
     const hours = dateTime.getHours();
     const minutes = dateTime.getMinutes();
     const ampm = hours >= 12 ? 'pm' : 'am';
-    let formattedHours = hours > 12 ? hours - 12 : hours;
-    let formattedMinutes = minutes > 9 ? "" + minutes : "0" + minutes;
+    const formattedHours = hours > 12 ? hours - 12 : hours;
+    const formattedMinutes = minutes > 9 ? "" + minutes : "0" + minutes;
 
     return formattedHours+':'+formattedMinutes+ampm;
   }
