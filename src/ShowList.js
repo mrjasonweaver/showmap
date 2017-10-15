@@ -6,11 +6,14 @@ export default function ShowList(props) {
     const dateTime = new Date(dateStr);
     const hours = dateTime.getHours();
     const minutes = dateTime.getMinutes();
+    const day = dateTime.getDate();
+    const month = dateTime.getMonth();
+    const year = dateTime.getFullYear();
     const ampm = hours >= 12 ? 'pm' : 'am';
     const formattedHours = hours > 12 ? hours - 12 : hours;
     const formattedMinutes = minutes > 9 ? "" + minutes : "0" + minutes;
 
-    return formattedHours+':'+formattedMinutes+ampm;
+    return `${month}/${day}/${year} at ${formattedHours}:${formattedMinutes}${ampm}`;
   }
   const shows = props.shows;
   const showItems = shows.map((show) =>
