@@ -22,7 +22,7 @@ const shows = [
             "longitude": 80.31451343
         },
         "latest_hit": "http://kutx.org/wp-content/uploads/2017/09/Bonobo-Bambro-Koyo-Ganda-feat.-Innov-Gnawa.mp3",
-        "date": "2018-04-23T01:25:43.511Z",
+        "date": "2018-06-13T01:25:43.511Z",
         "is_saved": true
     }
 ]
