@@ -27,7 +27,6 @@ export default function ShowList(props) {
     return `${formattedDate(day, month, date)} ${year} at ${formattedHours}:${formattedMinutes}${ampm}`;
   }
   const shows = props.shows;
-  // const showIdAndSavedClasses = 'show-' + show.show_id + ' ' + show.is_saved ? 'saved-yes' : 'saved-no';
   const showItems = shows.map((show) =>
     <li key={show.show_id} className={`show-${show.show_id} ${show.is_saved ? 'saved-yes' : 'saved-no'}`}>
       <audio controls="controls">
