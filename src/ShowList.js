@@ -28,7 +28,7 @@ export default function ShowList(props) {
   }
   const shows = props.shows;
   const showItems = shows.map((show) =>
-    <li key={show.show_id}>
+    <li key={show.show_id} className={'saved-' + show.is_saved ? 'yes' : 'no'}>
       <audio controls="controls">
         <source src={show.latest_hit} type="audio/mp3"></source>
       </audio>
@@ -39,7 +39,6 @@ export default function ShowList(props) {
         <li>Address: {show.venue_address}</li>
         <li>Latitude: {show.coordinates.latitude}</li>
         <li>Longitude: {show.coordinates.longitude}</li>
-        <li>Is saved: {show.is_saved ? 'Yes' : 'No'}</li>
       </ul>
     </li>
   );
