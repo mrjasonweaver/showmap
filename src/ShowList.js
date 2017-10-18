@@ -27,13 +27,14 @@ export default function ShowList(props) {
     return `${formattedDate(day, month, date)} ${year} at ${formattedHours}:${formattedMinutes}${ampm}`;
   }
   const shows = props.shows;
+  // const showIdAndSavedClasses = 'show-' + show.show_id + ' ' + show.is_saved ? 'saved-yes' : 'saved-no';
   const showItems = shows.map((show) =>
-    <li key={show.show_id} className={'saved-' + show.is_saved ? 'yes' : 'no'}>
+    <li key={show.show_id} className={`show-${show.show_id} ${show.is_saved ? 'saved-yes' : 'saved-no'}`}>
       <audio controls="controls">
         <source src={show.latest_hit} type="audio/mp3"></source>
       </audio>
-      <ul>
-        <li className={'show-' + show.show_id}>{show.artist_name}</li>
+      <ul className="show-info">
+        <li>{show.artist_name}</li>
         <li>Venue: {show.venue_name}</li>
         <li>When: {formattedDateTime(show.date)}</li>
         <li>Address: {show.venue_address}</li>
@@ -43,6 +44,6 @@ export default function ShowList(props) {
     </li>
   );
   return (
-    <ul>{showItems}</ul>
+    <ul className="showlist">{showItems}</ul>
   );
 }
