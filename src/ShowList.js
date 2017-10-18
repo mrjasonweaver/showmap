@@ -28,7 +28,7 @@ export default function ShowList(props) {
   }
   const shows = props.shows;
   const showItems = shows.map((show) =>
-    <li key={show.show_id} className={`show-${show.show_id} ${show.is_saved ? 'saved-yes' : 'saved-no'}`}>
+    <li key={show.show_id} className={`show-${show.show_id} saved-${show.is_saved ? 'yes' : 'no'}`}>
       <audio controls="controls">
         <source src={show.latest_hit} type="audio/mp3"></source>
       </audio>
