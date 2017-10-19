@@ -6,13 +6,21 @@
   font-size: large;
 }
 
+.showlist {
+  max-width: 300px;
+}
+
 .showlist li {
   list-style-type: none;
 } 
 
 .showlist ul {
-  margin-bottom: 20px;
-  padding-left: 0;
+  margin-bottom: 10px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #ccc;
+} 
+.showlist li:last-child ul {
+  border-bottom: none;
 } 
 
 .showlist ul li {
