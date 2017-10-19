@@ -12,7 +12,7 @@ export default function ShowList(props) {
     const year = dateTime.getFullYear();
     const ampm = hours >= 12 ? 'pm' : 'am';
     const formattedHours = hours > 12 ? hours - 12 : hours;
-    const formattedMinutes = minutes > 9 ? "" + minutes : "0" + minutes;
+    const formattedMinutes = minutes > 9 ? "" + minutes : minutes.toString().padStart(2, 0);
 
     function formattedDate(dayNumber, monthNumber, dateNumber) {
       const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
