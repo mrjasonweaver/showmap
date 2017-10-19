@@ -33,8 +33,7 @@ export default function ShowList(props) {
         <source src={show.latest_hit} type="audio/mp3"></source>
       </audio>
       <ul className="show-info">
-        <li>{show.artist_name}</li>
-        <li>Venue: {show.venue_name}</li>
+        <li>{show.artist_name} at {show.venue_name}</li>
         <li>When: {formattedDateTime(show.date)}</li>
         <li>Address: {show.venue_address}</li>
         <li>Latitude: {show.coordinates.latitude}</li>
