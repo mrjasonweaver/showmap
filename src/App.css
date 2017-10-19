@@ -5,3 +5,7 @@
 .App-intro {
   font-size: large;
 }
+
+.showlist ul {
+  margin-bottom: 40px;
+} 
