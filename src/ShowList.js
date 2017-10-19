@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ShowList(props) {
+const ShowList = (props) => {
 
   function formattedDateTime(dateStr) {
     const dateTime = new Date(dateStr);
@@ -47,3 +47,5 @@ export default function ShowList(props) {
     <ul className="showlist">{showItems}</ul>
   );
 }
+
+export default ShowList;
