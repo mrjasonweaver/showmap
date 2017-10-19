@@ -6,6 +6,16 @@
   font-size: large;
 }
 
+.showlist li {
+  list-style-type: none;
+} 
+
 .showlist ul {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-left: 0;
+} 
+
+.showlist ul li {
+  list-style-type: none;
+  padding: 2px 0 2px 0;
 } 
