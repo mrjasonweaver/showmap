@@ -9,8 +9,7 @@ const ShowList = (props) => {
         <li>{show.artist_name} at {show.venue_name}</li>
         <li>When: {formattedDateTime(show.date)}</li>
         <li>Address: {show.venue_address}</li>
-        <li>Latitude: {show.coordinates.latitude}</li>
-        <li>Longitude: {show.coordinates.longitude}</li>
+        <li>Coordinates: {show.coordinates.latitude}, {show.coordinates.longitude}</li>
         <li>      
           <audio controls="controls">
             <source src={show.latest_hit} type="audio/mp3"></source>
